@@ -1,0 +1,81 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    background-color:#8C978E;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    
+}
+.btn-profile {
+    margin-top: 8px;
+}
+.btn-profile i{
+    margin-left:5px;
+}
+.btn-profile ul {
+    background-color: #FFF;
+    list-style: none;
+    padding: 0px;
+}
+.btn-profile ul li {
+    padding: 0px 8px;
+}
+.btn-profile ul li a {
+    text-decoration: none;
+    width:100%;
+}
+.btn-profile ul li i {
+    padding-right: 8px;
+    color: #000;
+}
+.card {
+    border-radius: 10px;
+    padding:0px 20px 0px 20px;
+}
+.custom-content{
+    padding:0px !important;
+    margin:0px !important;
+}
+.custom-section {
+}
+label {
+    text-align: left;
+    padding: 0px !important;
+    padding-top: 7px !important;
+    margin: 0px !important;
+}
+input {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+}
+.marginpadding {
+    margin: 0px;
+    padding: 0px;
+}
+.paddinglr10 {
+    margin:0px;
+    padding: 0px 10px 0px 10px;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 60px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}

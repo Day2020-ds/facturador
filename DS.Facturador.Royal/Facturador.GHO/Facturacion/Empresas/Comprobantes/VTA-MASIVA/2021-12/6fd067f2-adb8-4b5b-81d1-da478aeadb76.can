@@ -1,0 +1,37 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CancelaCFDResponse xmlns="http://cancelacfd.sat.gob.mx">
+      <CancelaCFDResult Fecha="2022-01-12T16:32:53.0436946" RfcEmisor="VTA140911DP6">
+        <Folios>
+          <UUID>6FD067F2-ADB8-4B5B-81D1-DA478AEADB76</UUID>
+          <EstatusUUID>201</EstatusUUID>
+        </Folios>
+        <Signature Id="SelloSAT" xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+            <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#hmac-sha512" />
+            <Reference URI="">
+              <Transforms>
+                <Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">
+                  <XPath>not(ancestor-or-self::*[local-name()='Signature'])</XPath>
+                </Transform>
+              </Transforms>
+              <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512" />
+              <DigestValue>DFrgBAzDnrt0IOpqj5Gadl6k+fln+X/yvO8Bhysx1pMst0ah73ivDuo6JP0DiH0d77dNckwU5pPpaF/XdCwqLA==</DigestValue>
+            </Reference>
+          </SignedInfo>
+          <SignatureValue>0pydyG66LYTZvFUKbv1yZYyqFf1KxIyZuolwQ0g9ywtyVSTJJKRqtYb/DWhFIRgYLVRjhWt9Hw+aWReTwC/4BA==</SignatureValue>
+          <KeyInfo>
+            <KeyName>00001088888800000031</KeyName>
+            <KeyValue>
+              <RSAKeyValue>
+                <Modulus>ujwIJaMKWWmawqDpHx/OS10pXzEh2SQhY02y64v9Q0+I+0dGlIrjFJeGrsHqAT3JoYnh38Dxwta98t/7++dh2hOgiZEwRignWRIlOgM1MefBHEyY+hi4vHpZgPKq/hJVfHf9nOvlb5UgIHMTCEwrDp3qk9O5XtTEycnWwiqleG0c1J9sfbRxC0gYBHsNTH85OEtSXYMkiWNYNnFbIc7B0sgp2y18jUxUCNFBMMTV0tz2sxRF+V4hblaPjI75RWmvs9E4lD7MVmW3z7LIlSajuSL8eOqoerSkQhPBABIeQenEPQwRTt3ej3XpVaBsOmagIPZZI3RvOVh+5mcXDE5txQ==</Modulus>
+                <Exponent>AQAB</Exponent>
+              </RSAKeyValue>
+            </KeyValue>
+          </KeyInfo>
+        </Signature>
+      </CancelaCFDResult>
+    </CancelaCFDResponse>
+  </s:Body>
+</s:Envelope>

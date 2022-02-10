@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/implocal http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd" Version="3.3" Serie="A" Folio="1" Fecha="2022-01-27T10:08:14" Sello="PuzbqxGKAkwugRLrenebiC9tAVCGIkokPjltIj7Y2DTA0uXzSZ+Six34W7oH3voW1pqTOx2Xkq2/996flCpmSfgFh/MH2lexlV0G2dec1qJFvHfkKL5zFzZS1ly/m1vzWjyHhZ+jANLkByo7TuEldn2eyQqmij8sOtyHC0UXyerhaZDA1GwqnqBZxbKenU/ANy+JAZbxo/a8HYz+xAv+D+2NXilhu7RgoNH0PXPgvXugHSNe0e1l2LpA94YAM1KI74MQqitE8Qfr6nYgbcpG+m+vls5Jh7/v9m6pquz8e2L1jb891w+VMKfu+aATfrbqK1pP9on+p6OEoX3QyxOlRg==" FormaPago="01" NoCertificado="00001000000510686454" Certificado="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" SubTotal="1000.00" Moneda="MXN" TipoCambio="1" Total="1160.00" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="11320" xmlns:cfdi="http://www.sat.gob.mx/cfd/3">
+  <cfdi:Emisor Rfc="GAGJ7712024S3" Nombre="EMPRESA TEST" RegimenFiscal="612" />
+  <cfdi:Receptor Rfc="XAXX010101000" Nombre="Publico en general" UsoCFDI="G03" />
+  <cfdi:Conceptos>
+    <cfdi:Concepto ClaveProdServ="78181500" NoIdentificacion="PROD001" Cantidad="1" ClaveUnidad="E48" Descripcion="Servicio 1" ValorUnitario="1000.00" Importe="1000.00">
+      <cfdi:Impuestos>
+        <cfdi:Traslados>
+          <cfdi:Traslado Base="1000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00" />
+        </cfdi:Traslados>
+      </cfdi:Impuestos>
+    </cfdi:Concepto>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos TotalImpuestosTrasladados="160.00">
+    <cfdi:Traslados>
+      <cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00" />
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <implocal:ImpuestosLocales version="1.0" TotaldeRetenciones="0" TotaldeTraslados="0" xmlns:implocal="http://www.sat.gob.mx/implocal">
+      <implocal:TrasladosLocales ImpLocTrasladado="ISH" TasadeTraslado="0" Importe="0" />
+    </implocal:ImpuestosLocales>
+  </cfdi:Complemento>
+</cfdi:Comprobante>
