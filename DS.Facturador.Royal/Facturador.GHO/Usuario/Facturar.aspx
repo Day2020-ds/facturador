@@ -39,7 +39,7 @@
         };
     </script>
     <h2>Nuevo Comprobante (CFDI)</h2>
-
+    <hr />
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
@@ -59,8 +59,7 @@
         <Triggers>
         </Triggers>
     </asp:UpdatePanel>
-    <hr />
-    <div class="">
+    <div>
         <h5><span class='glyphicon glyphicon-user'></span> Cliente:</h5>
         <div class="row" id="cliente">
             <asp:UpdatePanel ID="upCliente" runat="server">

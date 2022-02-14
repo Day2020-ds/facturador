@@ -39,6 +39,7 @@
         };
     </script>
     <h2>Complemento de pago</h2>
+    <hr />
 
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
@@ -61,34 +62,30 @@
         </Triggers>
     </asp:UpdatePanel>
 
-    <div class="form-horizontal">
-        <hr />
+    <div>
         <h5><span class='glyphicon glyphicon-lock'></span> Emisor:</h5>
         <div class="row" id="cabecera">
-            <div class="col-md-3">
+            <!-- Empresa -->
+            <div class="col-md-5">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="Empresa" CssClass="col-md-4 control-label">Empresa</asp:Label>
-                    <div class="col-md-8">
-                        <asp:DropDownList ID="Empresa" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Empresa_SelectedIndexChanged">
-                        </asp:DropDownList>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Empresa" ValidationGroup="vgFacturar" Display="Dynamic"
-                            CssClass="text-danger" ErrorMessage="La empresa es obligatoria." />
-                    </div>
+                    <asp:Label runat="server" AssociatedControlID="Empresa" CssClass="control-label">Empresa</asp:Label>
+                    <asp:DropDownList ID="Empresa" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Empresa_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Empresa" ValidationGroup="vgFacturar" Display="Dynamic"
+                        CssClass="text-danger" ErrorMessage="La empresa es obligatoria." />
                 </div>
-               
             </div>
-            <div class="col-md-3">
+            <!-- Serie -->
+            <div class="col-md-5">
                  <asp:UpdatePanel ID="upSerie" runat="server">
                     <ContentTemplate>
                         <asp:HiddenField ID="idEmpresa" runat="server" Value="" />
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="Serie" CssClass="col-md-4 control-label">Serie</asp:Label>
-                            <div class="col-md-8">
-                                <asp:DropDownList runat="server" ID="Serie" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Serie_SelectedIndexChanged" >
-                                </asp:DropDownList>
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Serie" ValidationGroup="vgFacturar" Display="Dynamic"
-                                    CssClass="text-danger" ErrorMessage="La serie es obligatoria." />
-                            </div>
+                            <asp:Label runat="server" AssociatedControlID="Serie" CssClass="control-label">Serie</asp:Label>
+                            <asp:DropDownList runat="server" ID="Serie" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Serie_SelectedIndexChanged" >
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Serie" ValidationGroup="vgFacturar" Display="Dynamic"
+                                CssClass="text-danger" ErrorMessage="La serie es obligatoria." />
                         </div>
                     </ContentTemplate>
                     <Triggers>
@@ -101,53 +98,53 @@
              <div class="col-md-3">
             </div>
         </div>
-
+        <!-- Receptor -->
         <h5><span class='glyphicon glyphicon-lock'></span> Receptor:</h5>
         <div class="row" id="cliente">
             <asp:UpdatePanel ID="upCliente" runat="server">
                 <ContentTemplate>
+                    <!-- Btn buscar cliente -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3" style="padding: 0px;">
+                                <asp:LinkButton style="background-color: #35c135;width:100%;" ID="btnSearchClient" Text="<span class='glyphicon glyphicon-search'></span> Buscar cliente" runat="server" CssClass="btn btn-info" OnClick="btnSearchClient_Click" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cliente -->
                     <div class="col-md-3">
                         <asp:HiddenField ID="idReceptor" runat="server" />
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="Identificador" CssClass="col-md-4 control-label">Identificador</asp:Label>
-                            <div class="col-md-6">
-                                <asp:TextBox runat="server" ID="Identificador" CssClass="form-control" OnTextChanged="Identificador_TextChanged" AutoPostBack="True" />
-                            </div>
-                            <div class="col-md-2">
-                                <asp:LinkButton style="background-color: #35c135;" ID="btnSearchClient" Text="<span class='glyphicon glyphicon-search'></span>" runat="server" CssClass="btn btn-info" OnClick="btnSearchClient_Click" />
-                            </div>
-                        </div>                      
-                       
+                            <asp:Label runat="server" AssociatedControlID="Identificador" CssClass="control-label">Identificador</asp:Label>
+                            <asp:TextBox runat="server" ID="Identificador" CssClass="form-control" OnTextChanged="Identificador_TextChanged" AutoPostBack="True" disabled/>
+                        </div>
                     </div>
+                    <!-- RFC -->
                     <div class="col-md-3">
                         <div class="form-group" id="DivRFC">
-                            <asp:Label runat="server" AssociatedControlID="RFC" CssClass="col-md-4 control-label">* RFC</asp:Label>
-                            <div class="col-md-8">
-                                <asp:TextBox runat="server" ID="RFC" CssClass="form-control upper" MaxLength="13" OnTextChanged="RFC_TextChanged" AutoPostBack="true" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="RFC" Display="Dynamic" ValidationGroup="vgFacturar"
-                                    CssClass="text-danger" ErrorMessage="El RFC es obligatorio." />
-                                <asp:RegularExpressionValidator ID="revRFC" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
-                                    CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFC"
-                                    ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
-                            </div>
+                            <asp:Label runat="server" AssociatedControlID="RFC" CssClass="control-label">* RFC</asp:Label>
+                            <asp:TextBox runat="server" ID="RFC" CssClass="form-control upper" MaxLength="13" OnTextChanged="RFC_TextChanged" AutoPostBack="true" disabled/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="RFC" Display="Dynamic" ValidationGroup="vgFacturar"
+                                CssClass="text-danger" ErrorMessage="El RFC es obligatorio." />
+                            <asp:RegularExpressionValidator ID="revRFC" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
+                                CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFC"
+                                ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
                         </div>
                     </div>
+                    <!-- Razón social -->
                     <div class="col-md-3">
-                         <div class="form-group" id="DivRazonSocial">
-                            <asp:Label runat="server" AssociatedControlID="RazonSocial" CssClass="col-md-4 control-label">* Nombre</asp:Label>
-                            <div class="col-md-8">
-                                <asp:TextBox runat="server" ID="RazonSocial" CssClass="form-control" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="RazonSocial" Display="Dynamic"
-                                    CssClass="text-danger" ErrorMessage="La razón social es obligatoria." ValidationGroup="vgFacturar" />
-                            </div>
+                        <div class="form-group" id="DivRazonSocial">
+                            <asp:Label runat="server" AssociatedControlID="RazonSocial" CssClass="control-label">* Razón social</asp:Label>
+                            <asp:TextBox runat="server" ID="RazonSocial" CssClass="form-control" disabled/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="RazonSocial" Display="Dynamic"
+                                CssClass="text-danger" ErrorMessage="La razón social es obligatoria." ValidationGroup="vgFacturar" />
                         </div>
                     </div>
+                    <!-- País -->
                     <div class="col-md-3">
                         <div class="form-group">
-                            <asp:Label runat="server" AssociatedControlID="ddlPais" CssClass="col-md-4 control-label">Pais</asp:Label>
-                            <div class="col-md-8">
-                                <asp:DropDownList runat="server" ID="ddlPais" CssClass="form-control" OnSelectedIndexChanged="ddlPais_SelectedIndexChanged" AutoPostBack="true" />
-                            </div>
+                            <asp:Label runat="server" AssociatedControlID="ddlPais" CssClass="control-label">Pais</asp:Label>
+                            <asp:DropDownList runat="server" ID="ddlPais" CssClass="form-control" OnSelectedIndexChanged="ddlPais_SelectedIndexChanged" AutoPostBack="true" />
                         </div>
                     </div>
                 </ContentTemplate>
@@ -156,37 +153,35 @@
                 </Triggers>
             </asp:UpdatePanel>
         </div>
-       <h5><span class='glyphicon glyphicon-list'></span> Información:</h5>
-        <div class="row" id="pago">        
-            <div class="col-md-3">
-                    <asp:Label runat="server" AssociatedControlID="ddlFormaPago" CssClass="col-md-4 control-label">* F pago</asp:Label>
-                    <div class="col-md-8">
-                        <asp:DropDownList runat="server" style="width: 165px;" ID="ddlFormaPago" CssClass="form-control" OnSelectedIndexChanged="ddlFormaPago_SelectedIndexChanged" AutoPostBack="true" />
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlFormaPago" ValidationGroup="vgFacturar" Display="Dynamic"
-                            CssClass="text-danger" ErrorMessage="El método de pago es obligatorio." />
-                    </div>
+        <!-- Información -->
+        <h5><span class='glyphicon glyphicon-list'></span> Información:</h5>
+        <div class="row" id="pago">
+            <!-- Forma de pago -->
+            <div class="col-md-5">
+                <asp:Label runat="server" AssociatedControlID="ddlFormaPago" CssClass="control-label">* Forma de pago</asp:Label>
+                <asp:DropDownList runat="server" ID="ddlFormaPago" CssClass="form-control" OnSelectedIndexChanged="ddlFormaPago_SelectedIndexChanged" AutoPostBack="true" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlFormaPago" ValidationGroup="vgFacturar" Display="Dynamic"
+                    CssClass="text-danger" ErrorMessage="El método de pago es obligatorio." />
             </div>
+            <!-- Moneda -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="Moneda" CssClass="col-md-4 control-label">* Moneda</asp:Label>
-                    <div class="col-md-8">
-                        <asp:DropDownList runat="server" ID="Moneda" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Moneda_SelectedIndexChanged">
-                        </asp:DropDownList>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Moneda" ValidationGroup="vgFacturar" Display="Dynamic"
-                            CssClass="text-danger" ErrorMessage="La moneda es obligatoria." />
-                    </div>
+                    <asp:Label runat="server" AssociatedControlID="Moneda" CssClass="control-label">* Moneda</asp:Label>
+                    <asp:DropDownList runat="server" ID="Moneda" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Moneda_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Moneda" ValidationGroup="vgFacturar" Display="Dynamic"
+                        CssClass="text-danger" ErrorMessage="La moneda es obligatoria." />
                 </div>
             </div>
-             <div class="col-md-3">
+            <!-- Tipo de cambio -->
+             <div class="col-md-2">
                 <div class="form-group">
                     <asp:UpdatePanel ID="upTipoCambio" runat="server">
                         <ContentTemplate>
-                            <asp:Label runat="server" AssociatedControlID="TipoCambio" CssClass="col-md-4 control-label">T cambio</asp:Label>
-                            <div class="col-md-8">
-                                <asp:TextBox ID="TipoCambio" runat="server" CssClass="form-control numeric" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="TipoCambio" ValidationGroup="vgFacturar" Display="Dynamic"
-                                    CssClass="text-danger" ErrorMessage="El tipo de cambio es obligatorio." />
-                            </div>
+                            <asp:Label runat="server" AssociatedControlID="TipoCambio" CssClass="control-label">Tipo de cambio</asp:Label>
+                            <asp:TextBox ID="TipoCambio" runat="server" CssClass="form-control numeric" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TipoCambio" ValidationGroup="vgFacturar" Display="Dynamic"
+                                CssClass="text-danger" ErrorMessage="El tipo de cambio es obligatorio." />
                         </ContentTemplate>
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="Moneda" />
@@ -194,119 +189,104 @@
                     </asp:UpdatePanel>
                 </div>
             </div>
-            <div class="col-md-3">
+            <!-- Monto -->
+            <div class="col-md-2">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="FechaPago" CssClass="col-md-4 control-label">* Fecha</asp:Label>
-                    <div class="col-md-8">
-                        <div class="input-group date" id='DateFechaPago' >
-                            <asp:TextBox ID="FechaPago" runat="server" style="width: 170px;" CssClass="form-control date form_datetime" />
-                            <span class="input-group-addon" style="visibility: hidden"><span class="glyphicon glyphicon-calendar"></span></span>
-                        </div>
-                    </div>
-                </div>
-             </div>
-           
-            <div class="col-md-3">
-                <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="Monto" CssClass="col-md-4 control-label">* Monto</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox ID="Monto" runat="server" CssClass="form-control numeric" />
-                          <asp:RequiredFieldValidator runat="server" ControlToValidate="Monto" ValidationGroup="vgConcepto" Display="Dynamic"
-                               CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Monto</asp:Label>
+                    <asp:TextBox ID="Monto" runat="server" CssClass="form-control numeric" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Monto" ValidationGroup="vgConcepto" Display="Dynamic"
+                        CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />
                 </div>
             </div>
+            <!-- Fecha -->
+            <div class="col-md-2">
+                <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="FechaPago" CssClass="control-label">* Fecha</asp:Label>
+                    <asp:TextBox ID="FechaPago" runat="server" style="width: 170px;" CssClass="form-control date form_datetime" />
+                    <!-- 
+                    <span class="input-group-addon" style="visibility: hidden"><span class="glyphicon glyphicon-calendar"></span></span>
+                    -->
+                </div>
+            </div>
+            <!-- Operación -->
             <div class="col-md-3">
                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="NumOperacion" CssClass="col-md-4 control-label">Operación</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox ID="NumOperacion" runat="server" CssClass="form-control numeric" />
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="NumOperacion" CssClass="control-label">Operación</asp:Label>
+                    <asp:TextBox ID="NumOperacion" runat="server" CssClass="form-control numeric" />
                 </div>
             </div>
+            <!-- RFC CO -->
             <div class="col-md-3">
                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="RFCOrd" CssClass="col-md-4 control-label">RFC C O</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox runat="server" ID="RFCOrd" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
-                          <asp:RegularExpressionValidator ID="revRFC2" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
-                              CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCOrd"
-                              ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="RFCOrd" CssClass="col-md-4 control-label">RFC C O</asp:Label>
+                    <asp:TextBox runat="server" ID="RFCOrd" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
+                    <asp:RegularExpressionValidator ID="revRFC2" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
+                        CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCOrd"
+                        ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
                 </div>
             </div>
+            <!-- RFC CB -->
             <div class="col-md-3">
                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="RFCBen" CssClass="col-md-4 control-label">RFC C B</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox runat="server" ID="RFCBen" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
-                          <asp:RegularExpressionValidator ID="revRFC3" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
-                              CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCBen"
-                              ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="RFCBen" CssClass="control-label">RFC C B</asp:Label>
+                    <asp:TextBox runat="server" ID="RFCBen" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
+                    <asp:RegularExpressionValidator ID="revRFC3" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
+                        CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCBen"
+                        ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
                 </div>
             </div>
+            <!-- Banco O -->
             <div class="col-md-3">
                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="NomBancoOrdExt" CssClass="col-md-4 control-label">Banco O</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox runat="server" ID="NomBancoOrdExt" CssClass="form-control" AutoPostBack="true" />
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="NomBancoOrdExt" CssClass="control-label">Banco O</asp:Label>
+                    <asp:TextBox runat="server" ID="NomBancoOrdExt" CssClass="form-control" AutoPostBack="true" />
                 </div>
             </div>
-             <div class="col-md-3">
-                <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="CtaOrdenante" CssClass="col-md-4 control-label">Cta O</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox runat="server" ID="CtaOrdenante" CssClass="form-control" AutoPostBack="true" />
-                      </div>  
-                </div>
-            </div>
+            <!-- Cta O -->
             <div class="col-md-3">
                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="CtaBeneficiario" CssClass="col-md-4 control-label">Cta B</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox runat="server" ID="CtaBeneficiario" CssClass="form-control" AutoPostBack="true" />
-                      </div>  
+                    <asp:Label runat="server" AssociatedControlID="CtaOrdenante" CssClass="control-label">Cta O</asp:Label>
+                    <asp:TextBox runat="server" ID="CtaOrdenante" CssClass="form-control" AutoPostBack="true" />
                 </div>
             </div>
+            <!-- Cta B -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="CtaBeneficiario" CssClass="control-label">Cta B</asp:Label>
+                    <asp:TextBox runat="server" ID="CtaBeneficiario" CssClass="form-control" AutoPostBack="true" />
+                </div>
+            </div>
+            <!-- Parcialidad -->
             <div class="col-md-3">
                  <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="Monto" CssClass="col-md-4 control-label">Parcialidad</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox ID="parcialidad" runat="server" CssClass="form-control numeric" value="1" />
-                          <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="ImportePagado" ValidationGroup="vgConcepto" Display="Dynamic"
-                               CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />--%>
-                      </div>  
-                </div>
+                     <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">Parcialidad</asp:Label>
+                     <asp:TextBox ID="parcialidad" runat="server" CssClass="form-control numeric" value="1" />
+                     <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="ImportePagado" ValidationGroup="vgConcepto" Display="Dynamic"
+                        CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />--%>
+                 </div>  
              </div>
-             <div class="col-md-3">
-                  <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="Monto" CssClass="col-md-4 control-label">* Saldo Anterior</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox ID="SaldoAnterior" runat="server" CssClass="form-control numeric"  />
-                          <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="SaldoAnterior" ValidationGroup="vgConcepto" Display="Dynamic"
-                               CssClass="text-danger" ErrorMessage="El Saldo Anterior es obligatorio." />--%>
-                </div> 
-            </div>
-             </div>
+            <!-- Saldo Anterior -->
             <div class="col-md-3">
-                 <div class="form-group">
-                      <asp:Label runat="server" AssociatedControlID="Monto" CssClass="col-md-4 control-label">* Importe Pagado</asp:Label>
-                      <div class="col-md-8">
-                          <asp:TextBox ID="ImportePagado" runat="server" CssClass="form-control numeric" />
-                          <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="ImportePagado" ValidationGroup="vgConcepto" Display="Dynamic"
-                               CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />--%>
-                      </div>  
-                </div>
-             </div>
-            <div class="col-md-3">
-                <div class="col-md-4">
-                    <asp:Button runat="server" ID="btnConsultar" Text="Consultar" CssClass="btn btn-primary" OnClick="Consultar" />
+                <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Saldo Anterior</asp:Label>
+                    <asp:TextBox ID="SaldoAnterior" runat="server" CssClass="form-control numeric"  />
+                    <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="SaldoAnterior" ValidationGroup="vgConcepto" Display="Dynamic"
+                            CssClass="text-danger" ErrorMessage="El Saldo Anterior es obligatorio." />--%>
                 </div>
             </div>
-            
-           
+            <!-- Saldo anterior -->
+            <div class="col-md-3">
+                <div class="form-group">
+                     <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Importe Pagado</asp:Label>
+                     <asp:TextBox ID="ImportePagado" runat="server" CssClass="form-control numeric" />
+                     <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="ImportePagado" ValidationGroup="vgConcepto" Display="Dynamic"
+                            CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />--%>
+                </div>
+            </div>
+            <!-- Btn consultar -->
+            <div class="col-md-3" style="padding-top:26px;">
+                <asp:Button runat="server" ID="btnConsultar" Text="Consultar" CssClass="btn btn-primary" OnClick="Consultar" />
+            </div>
         </div>
         <br />
     <asp:UpdatePanel ID="upCrudGrid" runat="server">
@@ -393,7 +373,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-11">
+                            <div class="col-md-11" style="padding: 8px 0px;">
                                 <asp:Button ID="btnGenerar" Text="Generar factura" runat="server" OnClientClick="if (Page_ClientValidate('vgFacturar')) {this.disabled=true;this.value = 'Generando...'}" UseSubmitBehavior="false" CssClass="btn btn-primary pull-right" ValidationGroup="vgFacturar" OnClick="btnGenerar_Click" />
                             </div>
                         </div>

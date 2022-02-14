@@ -96,6 +96,15 @@ namespace Facturador.GHO.Usuario
         protected global::System.Web.UI.UpdatePanel upCliente;
 
         /// <summary>
+        /// Control btnSearchClient.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSearchClient;
+
+        /// <summary>
         /// Control idReceptor.
         /// </summary>
         /// <remarks>
@@ -112,15 +121,6 @@ namespace Facturador.GHO.Usuario
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Identificador;
-
-        /// <summary>
-        /// Control btnSearchClient.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSearchClient;
 
         /// <summary>
         /// Control RFC.
@@ -195,15 +195,6 @@ namespace Facturador.GHO.Usuario
         protected global::System.Web.UI.WebControls.TextBox TipoCambio;
 
         /// <summary>
-        /// Control FechaPago.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaPago;
-
-        /// <summary>
         /// Control Monto.
         /// </summary>
         /// <remarks>
@@ -211,6 +202,15 @@ namespace Facturador.GHO.Usuario
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Monto;
+
+        /// <summary>
+        /// Control FechaPago.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FechaPago;
 
         /// <summary>
         /// Control NumOperacion.
