@@ -2,7 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Content/jQuery.FileUpload/css/jquery.fileupload.css" rel="stylesheet" />
-   <h2>Mis productos</h2>
+    <h2>Mis productos</h2>
+    <hr />
     <script type="text/javascript">
         $(document).on('keypress keyup blur', '.numeric', function (event) {
             $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
@@ -15,10 +16,11 @@
             $(this).val($(this).val().toUpperCase());
         });
     </script>
-    <div class="form-horizontal">
-        <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Empresa" CssClass="col-md-2 control-label">Empresa</asp:Label>
-            <div class="col-md-10">
+    <div>
+        <!-- Empresa -->
+        <div class="row">
+            <div class="col-md-12">
+                <asp:Label runat="server" AssociatedControlID="Empresa" CssClass="col-md-2 control-label">Empresa</asp:Label>
                 <asp:DropDownList ID="Empresa" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="Empresa_SelectedIndexChanged">
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Empresa" ValidationGroup="vgFacturar" Display="Dynamic"
@@ -32,22 +34,20 @@
                     <asp:Literal runat="server" ID="ErrorMessage" />
                 </p>
                  <div class="form-group">
-            <div class="col-md-2">
-                <asp:Button runat="server" ID="btnRegistrar" CssClass="btn btn-primary" Text="Nuevo producto" OnClick="btnRegistrar_Click"></asp:Button>
-                
-            </div>
-            <div class="col-md-2">
-                <span class="btn btn-success fileinput-button">
-                    <i class="glyphicon glyphicon-plus"></i>
-                    <span>Lista productos.</span>
-                    <input id="file1" type="file" name="fileUpload" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" runat="server" />
-                </span>
-               
-            </div>
-            <div class="col-md-2">
-                  <asp:Button ID="Importar" runat="server" CssClass="btn btn-default" Text="Importar" OnClick="Importar_Click" />
-            </div>
-        </div>
+                    <div class="col-md-2 marginpadding">
+                        <asp:Button runat="server" ID="btnRegistrar" CssClass="btn btn-primary" Text="Nuevo producto" OnClick="btnRegistrar_Click"></asp:Button>
+                    </div>
+                    <div class="col-md-2 marginpadding"  style="padding-left: 13px;">
+                        <span class="btn btn-success fileinput-button">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            <span>Lista productos.</span>
+                            <input id="file1" type="file" name="fileUpload" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" runat="server" />
+                        </span>
+                    </div>
+                    <div class="col-md-2 marginpadding" style="padding-left: 13px;">
+                          <asp:Button ID="Importar" runat="server" CssClass="btn btn-default" Text="Importar" OnClick="Importar_Click" />
+                    </div>
+                 </div>
                
                 <br></br>
                 <asp:GridView ID="viewProductos" runat="server" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" DataKeyNames="id" OnRowCommand="viewProductos_RowCommand">

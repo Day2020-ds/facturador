@@ -103,11 +103,16 @@
         <div class="row" id="cliente">
             <asp:UpdatePanel ID="upCliente" runat="server">
                 <ContentTemplate>
-                    <!-- Btn buscar cliente -->
+                    <!-- Buscar -->
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="row">
+                            <!-- Cliente -->
                             <div class="col-md-3" style="padding: 0px;">
                                 <asp:LinkButton style="background-color: #35c135;width:100%;" ID="btnSearchClient" Text="<span class='glyphicon glyphicon-search'></span> Buscar cliente" runat="server" CssClass="btn btn-info" OnClick="btnSearchClient_Click" />
+                            </div>
+                            <!-- Comprobante -->
+                            <div class="col-md-3" style="padding: 0px;">
+                                <asp:LinkButton style="margin-left:15px; width:100%;" ID="LinkButton1" Text="<i class='fas fa-file-invoice'></i> Buscar por CFDI" runat="server" CssClass="btn btn-primary" OnClick="btnSearchClient_Click" />
                             </div>
                         </div>
                     </div>
@@ -193,7 +198,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Monto</asp:Label>
-                    <asp:TextBox ID="Monto" runat="server" CssClass="form-control numeric" />
+                    <asp:TextBox ID="Monto" runat="server" CssClass="form-control numeric" placeholder="$ 0.00"/>
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Monto" ValidationGroup="vgConcepto" Display="Dynamic"
                         CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />
                 </div>
@@ -202,7 +207,7 @@
             <div class="col-md-2">
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="FechaPago" CssClass="control-label">* Fecha</asp:Label>
-                    <asp:TextBox ID="FechaPago" runat="server" style="width: 170px;" CssClass="form-control date form_datetime" />
+                    <asp:TextBox Type="Date" ID="FechaPago" runat="server" style="width: 170px;" CssClass="form-control date form_datetime" />
                     <!-- 
                     <span class="input-group-addon" style="visibility: hidden"><span class="glyphicon glyphicon-calendar"></span></span>
                     -->
@@ -218,7 +223,7 @@
             <!-- RFC CO -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="RFCOrd" CssClass="col-md-4 control-label">RFC C O</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="RFCOrd" CssClass="control-label">RFC Ordenante</asp:Label>
                     <asp:TextBox runat="server" ID="RFCOrd" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
                     <asp:RegularExpressionValidator ID="revRFC2" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
                         CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCOrd"
@@ -228,7 +233,7 @@
             <!-- RFC CB -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="RFCBen" CssClass="control-label">RFC C B</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="RFCBen" CssClass="control-label">RFC Beneficiario</asp:Label>
                     <asp:TextBox runat="server" ID="RFCBen" CssClass="form-control upper" MaxLength="13" AutoPostBack="true" />
                     <asp:RegularExpressionValidator ID="revRFC3" runat="server" ErrorMessage="El RFC no es valido" Display="Dynamic"
                         CssClass="text-danger" ValidationGroup="vgFacturar" ControlToValidate="RFCBen"
@@ -238,21 +243,21 @@
             <!-- Banco O -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="NomBancoOrdExt" CssClass="control-label">Banco O</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="NomBancoOrdExt" CssClass="control-label">Banco Ordenante</asp:Label>
                     <asp:TextBox runat="server" ID="NomBancoOrdExt" CssClass="form-control" AutoPostBack="true" />
                 </div>
             </div>
             <!-- Cta O -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="CtaOrdenante" CssClass="control-label">Cta O</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="CtaOrdenante" CssClass="control-label">Cuenta Ordenante</asp:Label>
                     <asp:TextBox runat="server" ID="CtaOrdenante" CssClass="form-control" AutoPostBack="true" />
                 </div>
             </div>
             <!-- Cta B -->
             <div class="col-md-3">
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="CtaBeneficiario" CssClass="control-label">Cta B</asp:Label>
+                    <asp:Label runat="server" AssociatedControlID="CtaBeneficiario" CssClass="control-label">Cuenta Beneficiario</asp:Label>
                     <asp:TextBox runat="server" ID="CtaBeneficiario" CssClass="form-control" AutoPostBack="true" />
                 </div>
             </div>
@@ -269,7 +274,7 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Saldo Anterior</asp:Label>
-                    <asp:TextBox ID="SaldoAnterior" runat="server" CssClass="form-control numeric"  />
+                    <asp:TextBox ID="SaldoAnterior" runat="server" CssClass="form-control numeric" placeholder="$ 0.00" />
                     <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="SaldoAnterior" ValidationGroup="vgConcepto" Display="Dynamic"
                             CssClass="text-danger" ErrorMessage="El Saldo Anterior es obligatorio." />--%>
                 </div>
@@ -278,15 +283,17 @@
             <div class="col-md-3">
                 <div class="form-group">
                      <asp:Label runat="server" AssociatedControlID="Monto" CssClass="control-label">* Importe Pagado</asp:Label>
-                     <asp:TextBox ID="ImportePagado" runat="server" CssClass="form-control numeric" />
+                     <asp:TextBox ID="ImportePagado" runat="server" CssClass="form-control numeric" placeholder="$ 0.00" />
                      <%--<asp:RequiredFieldValidator runat="server" ControlToValidate="ImportePagado" ValidationGroup="vgConcepto" Display="Dynamic"
                             CssClass="text-danger" ErrorMessage="El Monto es obligatorio." />--%>
                 </div>
             </div>
             <!-- Btn consultar -->
+            <!--
             <div class="col-md-3" style="padding-top:26px;">
                 <asp:Button runat="server" ID="btnConsultar" Text="Consultar" CssClass="btn btn-primary" OnClick="Consultar" />
             </div>
+            -->
         </div>
         <br />
     <asp:UpdatePanel ID="upCrudGrid" runat="server">
@@ -357,7 +364,7 @@
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="Subtotal" CssClass="col-md-4 control-label">Subtotal</asp:Label>
                             <div class="col-md-8">
-                                <asp:TextBox ID="Subtotal" runat="server" CssClass="form-control numeric" ReadOnly="true" />
+                                <asp:TextBox ID="Subtotal" runat="server" CssClass="form-control numeric" ReadOnly="true" placeholder="$ 0.00" />
                             </div>
                         </div>
                         <div class="form-group" id="divIVA" runat="server" style="display: none">
@@ -369,7 +376,7 @@
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="Total" CssClass="col-md-4 control-label">Total</asp:Label>
                             <div class="col-md-8">
-                                <asp:TextBox ID="Total" runat="server" CssClass="form-control numeric" ReadOnly="true" />
+                                <asp:TextBox ID="Total" runat="server" CssClass="form-control numeric" ReadOnly="true"  placeholder="$ 0.00"/>
                             </div>
                         </div>
                         <div class="form-group">
