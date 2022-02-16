@@ -416,7 +416,8 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title" id="clienteLabel">
-                                <asp:Label runat="server" ID="titleCliente" Text="" /></h4>
+                                <asp:Label runat="server" ID="titleCliente" Text="" />
+                            </h4>
                         </div>
                         <div class="modal-body">
                             <div class="form-horizontal">
@@ -424,41 +425,28 @@
                                 <p class="text-danger">
                                     <asp:Literal runat="server" ID="ErrorCliente" />
                                 </p>
-
                                 <div class="row">
+                                    <!-- Identificador -->
                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="BuscarIdentificador" CssClass="col-md-4 control-label">Identificador</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="BuscarIdentificador" CssClass="form-control" />
-                                            </div>
-                                        </div>
-                                      
+                                            <asp:Label runat="server" AssociatedControlID="BuscarIdentificador" CssClass="control-label">Identificador</asp:Label>
+                                            <asp:TextBox runat="server" ID="BuscarIdentificador" CssClass="form-control" placeholder="Alias o razón social"/>
                                     </div>
+                                    <!-- Nombre o razón social -->
                                      <div class="col-md-4">
-                                           <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="BuscarRazonSocial" CssClass="col-md-4 control-label">Nombre</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="BuscarRazonSocial" CssClass="form-control" />
-                                            </div>
-                                        </div>
+                                             <asp:Label runat="server" AssociatedControlID="BuscarRazonSocial" CssClass="control-label">Nombre</asp:Label>
+                                             <asp:TextBox runat="server" ID="BuscarRazonSocial" CssClass="form-control" placeholder="Razón social" />
                                     </div>
+                                    <!-- RFC -->
                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="BuscarRFC" CssClass="col-md-4 control-label">RFC</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="BuscarRFC" CssClass="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
-                                            </div>
-                                        </div>
+                                        <asp:Label runat="server" AssociatedControlID="BuscarRFC" CssClass="control-label">RFC</asp:Label>
+                                        <asp:TextBox runat="server" ID="BuscarRFC" CssClass="form-control" placeholder="XAXX010101000 "/>
                                     </div>
-                                   
+                                    <!-- Btn Buscar -->
+                                    <div class="col-md-9"></div>
+                                    <div class="col-md-3" style="padding-top:15px;">
+                                        <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
+                                    </div>
                                 </div>
-
                                 <br></br>
                                 <asp:GridView ID="viewEmpresas" runat="server" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" DataKeyNames="idreceptor" OnRowCommand="viewEmpresas_RowCommand">
                                     <Columns>
@@ -472,7 +460,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fas fa-times"></i> Cerrar</button>
                         </div>
                     </div>
                 </ContentTemplate>

@@ -50,6 +50,9 @@ input {
     max-width: 100% !important;
     width: 100% !important;
 }
+hr {
+    border-color:#7B92A5;
+}
 .footer {
     margin-top: 10px;
     margin-bottom: 10px;
