@@ -567,9 +567,10 @@
                                         <asp:Label runat="server" AssociatedControlID="BuscarRFC" CssClass="control-label">RFC</asp:Label>
                                         <asp:TextBox runat="server" ID="BuscarRFC" CssClass="form-control" placeholder="XAXX010101000 "/>
                                     </div>
+                                    <!-- Btn Buscar -->
                                     <div class="col-md-9"></div>
-                                    <div class="col-md-3" style="padding-top: 15px;">
-                                        <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
+                                    <div class="col-md-3" style="padding-top:15px;">
+                                        <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right fullwidth" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
                                     </div>
                                 </div>
                                 <br></br>
@@ -625,7 +626,7 @@
                                     </div>
                                     <!-- Btn buscar -->
                                     <div class="col-md-3" style="padding-top:27px;">
-                                        <asp:Button runat="server" ID="btnBuscarProducto" CssClass="btn btn-primary pull-right" Text="Buscar" OnClick="btnBuscarProducto_Click"></asp:Button>
+                                        <asp:Button runat="server" ID="btnBuscarProducto" CssClass="btn btn-primary pull-right fullwidth" Text="Buscar" OnClick="btnBuscarProducto_Click"></asp:Button>
                                     </div>
                                 </div>
                                 <br></br>

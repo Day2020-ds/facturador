@@ -381,7 +381,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-11" style="padding: 8px 0px;">
-                                <asp:Button ID="btnGenerar" Text="Generar factura" runat="server" OnClientClick="if (Page_ClientValidate('vgFacturar')) {this.disabled=true;this.value = 'Generando...'}" UseSubmitBehavior="false" CssClass="btn btn-primary pull-right" ValidationGroup="vgFacturar" OnClick="btnGenerar_Click" />
+                                <asp:Button ID="btnGenerar" Text="Generar Complemento" runat="server" OnClientClick="if (Page_ClientValidate('vgFacturar')) {this.disabled=true;this.value = 'Generando...'}" UseSubmitBehavior="false" CssClass="btn btn-primary pull-right" ValidationGroup="vgFacturar" OnClick="btnGenerar_Click" />
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                                     <!-- Btn Buscar -->
                                     <div class="col-md-9"></div>
                                     <div class="col-md-3" style="padding-top:15px;">
-                                        <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
+                                        <asp:Button runat="server" ID="btnBuscarCliente" CssClass="btn btn-primary pull-right fullwidth" Text="Buscar" OnClick="btnBuscarCliente_Click"></asp:Button>
                                     </div>
                                 </div>
                                 <br></br>

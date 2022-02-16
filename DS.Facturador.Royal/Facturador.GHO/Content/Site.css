@@ -48,7 +48,6 @@ label {
 }
 input {
     max-width: 100% !important;
-    width: 100% !important;
 }
 hr {
     border-color:#7B92A5;
@@ -66,6 +65,9 @@ hr {
 .paddinglr10 {
     margin:0px;
     padding: 0px 10px 0px 10px;
+}
+.fullwidth {
+    width: 100% !important;
 }
 .modal-header {
     background-color: #7B92A5;
