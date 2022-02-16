@@ -1,6 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    background-color:#8C978E;
+    background-color: #7B92A5;
 }
 
 /* Wrapping element */
@@ -63,6 +63,26 @@ input {
 .paddinglr10 {
     margin:0px;
     padding: 0px 10px 0px 10px;
+}
+.modal-header {
+    background-color: #7B92A5;
+    color: #FFF;
+}
+.modal-header .close{
+    color:red;
+}
+.modal-content {
+    background-color: #A9B9C6;
+    border-radius: 10px;
+}
+.modal-content table tr th {
+    background-color: #7B92A5 !important;
+    color: #FFF;
+    text-align:center;
+}
+.modal-footer {
+    background-color: #7B92A5;
+}
 }
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input[type="text"],

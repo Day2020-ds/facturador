@@ -138,7 +138,7 @@
         </div>
 
         <!-- ..:: Main Container ::.. -->
-        <div class="col-lg-12 col-md-12 col-sm-12" style="padding-top:60px; background-color:#8C978E;">
+        <div class="col-lg-12 col-md-12 col-sm-12" style="padding-top:60px; background-color:#7B92A5;">
           <div class="card" style="background-color:#F6F6F6;">
               <div class="card-body">
                   <!-- ..:: Custom Content ::.. -->
@@ -157,5 +157,6 @@
             </div>
         </div>
     </form>
+    <script type="text/javascript" src="../Scripts/facturar.js"></script>
 </body>
 </html>
