@@ -85,64 +85,46 @@
                             <div class="form-horizontal">
                                 <asp:HiddenField runat="server" ID="idProducto" />
                                 <div class="row">
-                                     <div class="col-md-3">
-                                           <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="Codigo" CssClass="col-md-4 control-label">Codigo</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="Codigo" CssClass="form-control" />
-                                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Codigo" Display="Dynamic"
-                                                    CssClass="text-danger" ErrorMessage="El codigo es obligatorio." ValidationGroup="registrarGroup" />
-                                            </div>
-                                        </div>
-                                          <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="IVA" CssClass="col-md-4 control-label">IVA%</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="IVA" CssClass="form-control numeric" />
-                                            </div>
-                                        </div>
-                                        
-                                     </div>
+                                    <!-- Cóodigo SKU -->
                                     <div class="col-md-3">
-                                         <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="UnidadMedida" CssClass="col-md-4 control-label">Unidad</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="UnidadMedida" CssClass="form-control" />
-                                                <asp:RequiredFieldValidator runat="server" ControlToValidate="UnidadMedida" Display="Dynamic"
-                                                    CssClass="text-danger" ErrorMessage="La unidad de medida es obligatoria." ValidationGroup="registrarGroup" />
-                                            </div>
-                                        </div>
-                                          <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="IEPS" CssClass="col-md-4 control-label">IEPS%</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="IEPS" CssClass="form-control numeric" />
-                                            </div>
-                                        </div>
-                                     </div>
+                                        <asp:Label runat="server" AssociatedControlID="Codigo" CssClass="control-label">SKU</asp:Label>
+                                        <asp:TextBox runat="server" ID="Codigo" CssClass="form-control" placeholder="Clave o SKU"/>
+                                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Codigo" Display="Dynamic"
+                                            CssClass="text-danger" ErrorMessage="El codigo es obligatorio." ValidationGroup="registrarGroup" />                                        
+                                    </div>
+                                    <!-- Unidad -->
                                     <div class="col-md-3">
-                                         <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="ValorUnitario" CssClass="col-md-4 control-label">Precio</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="ValorUnitario" CssClass="form-control numeric" />
-                                                <asp:RequiredFieldValidator runat="server" ControlToValidate="ValorUnitario" Display="Dynamic"
-                                                    CssClass="text-danger" ErrorMessage="El valor unitario es obligatorio." ValidationGroup="registrarGroup" />
-                                            </div>
-                                        </div>
-                                       
-                                     </div>
+                                        <asp:Label runat="server" AssociatedControlID="UnidadMedida" CssClass="control-label">Unidad</asp:Label>
+                                        <asp:TextBox runat="server" ID="UnidadMedida" CssClass="form-control" placeholder="Unidad"/>
+                                        <asp:RequiredFieldValidator runat="server" ControlToValidate="UnidadMedida" Display="Dynamic"
+                                            CssClass="text-danger" ErrorMessage="La unidad de medida es obligatoria." ValidationGroup="registrarGroup" />
+                                    </div>
+                                    <!-- Precio -->
                                     <div class="col-md-3">
-                                        <div class="form-group">
-                                            <asp:Label runat="server" AssociatedControlID="Descuento" CssClass="col-md-4 control-label">Desc %</asp:Label>
-                                            <div class="col-md-8">
-                                                <asp:TextBox runat="server" ID="Descuento" CssClass="form-control numeric" />
-                                            </div>
-                                        </div>
-                                        
-                                     </div>  
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label runat="server" AssociatedControlID="Descripcion" CssClass="col-md-2 control-label">Descripción</asp:Label>
-                                    <div class="col-md-10">
-                                        <asp:TextBox runat="server" ID="Descripcion" CssClass="form-control" TextMode="MultiLine" />
+                                        <asp:Label runat="server" AssociatedControlID="ValorUnitario" CssClass="control-label">Precio</asp:Label>
+                                        <asp:TextBox runat="server" ID="ValorUnitario" CssClass="form-control numeric" placeholder="$ 0.00"/>
+                                        <asp:RequiredFieldValidator runat="server" ControlToValidate="ValorUnitario" Display="Dynamic"
+                                            CssClass="text-danger" ErrorMessage="El valor unitario es obligatorio." ValidationGroup="registrarGroup" />
+                                    </div>
+                                    <!-- IVA -->
+                                    <div class="col-md-3">
+                                        <asp:Label runat="server" AssociatedControlID="IVA" CssClass="control-label">IVA%</asp:Label>
+                                        <asp:TextBox runat="server" ID="IVA" CssClass="form-control numeric" placeholder="16.00 %" />
+                                    </div>
+                                    <!-- IEPS -->
+                                    <div class="col-md-3">
+                                        <asp:Label runat="server" AssociatedControlID="IEPS" CssClass="control-label">IEPS %</asp:Label>
+                                        <asp:TextBox runat="server" ID="IEPS" CssClass="form-control numeric" placeholder="00.00 %"/>
+                                    </div>
+                                    <!-- Descuento -->
+                                    <div class="col-md-3">
+                                        <asp:Label runat="server" AssociatedControlID="Descuento" CssClass="control-label">Desc %</asp:Label>
+                                        <asp:TextBox runat="server" ID="Descuento" CssClass="form-control numeric" placeholder="0.00 %" />
+                                    </div>
+                                    <!-- Descripción -->
+                                    <div class="col-md-6">
+                                        <asp:Label runat="server" AssociatedControlID="Descripcion" CssClass="control-label">Descripción</asp:Label>
+                                        <asp:TextBox runat="server" ID="Descripcion" CssClass="form-control" TextMode="MultiLine" placeholder="Descripción del producto o servicio..."/>
                                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Descripcion" Display="Dynamic"
                                             CssClass="text-danger" ErrorMessage="La descripción es obligatoria." ValidationGroup="registrarGroup" />
                                     </div>
@@ -150,8 +132,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                             <asp:Button ID="btnProducto" runat="server" ValidationGroup="registrarGroup" CssClass="btn btn-primary" Text="Registrar" OnClick="btnProducto_Click"></asp:Button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"> <i class="fas fa-times"></i> Cerrar</button>
                         </div>
                     </div>
                 </ContentTemplate>

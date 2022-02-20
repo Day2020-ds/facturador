@@ -105,15 +105,6 @@ namespace Facturador.GHO.Usuario
         protected global::System.Web.UI.WebControls.TextBox Codigo;
 
         /// <summary>
-        /// Control IVA.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IVA;
-
-        /// <summary>
         /// Control UnidadMedida.
         /// </summary>
         /// <remarks>
@@ -123,15 +114,6 @@ namespace Facturador.GHO.Usuario
         protected global::System.Web.UI.WebControls.TextBox UnidadMedida;
 
         /// <summary>
-        /// Control IEPS.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IEPS;
-
-        /// <summary>
         /// Control ValorUnitario.
         /// </summary>
         /// <remarks>
@@ -139,6 +121,24 @@ namespace Facturador.GHO.Usuario
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ValorUnitario;
+
+        /// <summary>
+        /// Control IVA.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IVA;
+
+        /// <summary>
+        /// Control IEPS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox IEPS;
 
         /// <summary>
         /// Control Descuento.

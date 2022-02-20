@@ -108,6 +108,7 @@
                                             ValidationExpression="[A-Z,Ñ,&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z,0-9]?[A-Z,0-9]?[0-9,A-Z]?"></asp:RegularExpressionValidator>
                                     </div>
                                     <!-- CURP -->
+                                    <!--
                                     <div class="col-md-3">
                                         <asp:UpdatePanel ID="updFormularioCliente" runat="server">
                                             <ContentTemplate>
@@ -128,6 +129,7 @@
                                             </Triggers>--%>
                                         </asp:UpdatePanel>
                                     </div>
+                                    -->
                                     <!-- Calle -->
                                     <div class="col-md-4">
                                         <asp:Label runat="server" AssociatedControlID="Calle" CssClass="control-label">Calle</asp:Label>
