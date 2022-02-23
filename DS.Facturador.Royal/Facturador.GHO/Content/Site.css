@@ -88,7 +88,7 @@ hr {
 .modal-footer {
     background-color: #7B92A5;
 }
-}
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input[type="text"],
 input[type="password"] {

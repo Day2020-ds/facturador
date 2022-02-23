@@ -1,0 +1,36 @@
+﻿.img-login {
+    padding: 25px 0px;
+}
+.img-login img{
+    width:100%;
+    height100%;
+}
+.form-login {
+    padding: 5px 80px;
+}
+lottie-player {
+    width: 120px !important;
+    height: 80px !important;
+    margin-top: 0px !important;
+    margin-left: 40% !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.btn-login {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #4e73df;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-login:hover, .btn-login:active, .btn-login:focus {
+    background: #1D57FF;
+}
