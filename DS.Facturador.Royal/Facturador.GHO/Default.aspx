@@ -9,6 +9,67 @@
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_bR3P9F.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
     </div>
+    <!-- íconos -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-plus-circle"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Timbres disponibles</span>
+                <span class="info-box-number">
+                    8                                  
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+            <span class="info-box-icon bg-yellow elevation-1"><i class="fas fa-boxes"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Total Productos</span>
+                <span class="info-box-number">
+                    1
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <!-- /.col -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+            <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-file-invoice"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Documentos timbrados</span>
+                <span class="info-box-number">
+                    18
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <!-- /.col -->
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-ban"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Documentos cancelados</span>
+                <span class="info-box-number">
+                    5
+                </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+    <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+
+
     <!-- 
     <div class="jumbotron" style="background-color: white;">
 
