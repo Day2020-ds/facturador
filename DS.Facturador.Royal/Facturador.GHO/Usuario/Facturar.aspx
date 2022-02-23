@@ -13,7 +13,7 @@
         $(document).on('keypress keyup blur', '.upper', function (event) {
             $(this).val($(this).val().replace(/[^a-zA-Z0-9&]/g, function (s) { return '' }));
             $(this).val($(this).val().toUpperCase());
-        });
+        });có
         $(document).on('click', '#msg_exito_close', function () {
             $('#msg_exito').hide();
         });
@@ -277,7 +277,7 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <asp:Label runat="server" AssociatedControlID="ClaveCargo" CssClass="control-label">SKU</asp:Label>
-                            <asp:TextBox ID="ClaveCargo" runat="server" CssClass="form-control" OnTextChanged="ClaveCargo_TextChanged" AutoPostBack="true" disabled/>
+                            <asp:TextBox ID="ClaveCargo" runat="server" CssClass="form-control" OnTextChanged="ClaveCargo_TextChanged" AutoPostBack="true"/>
                         </div>
                         <!-- Precio Unitario -->
                          <div class="form-group">
@@ -407,7 +407,7 @@
                 <!-- Descripcion -->
                 <div class="col-md-12">
                     <asp:Label runat="server" AssociatedControlID="Descripcion" CssClass="control-label">Descripción</asp:Label>
-                    <asp:TextBox runat="server" ID="Descripcion" CssClass="form-control" TextMode="MultiLine" disabled/>
+                    <asp:TextBox runat="server" ID="Descripcion" CssClass="form-control" TextMode="MultiLine"/>
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Descripcion" Display="Dynamic"
                         CssClass="text-danger" ErrorMessage="La descripción es obligatoria." ValidationGroup="registrarGroup" />
                 </div>
