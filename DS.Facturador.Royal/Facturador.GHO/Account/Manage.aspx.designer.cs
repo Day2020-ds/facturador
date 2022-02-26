@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Facturador.GHO.Account {
-    
-    
-    public partial class Manage {
-        
+namespace Facturador.GHO.Account
+{
+
+
+    public partial class Manage
+    {
+
         /// <summary>
         /// Control successMessage.
         /// </summary>
@@ -20,43 +22,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder successMessage;
-        
-        /// <summary>
-        /// Control setPassword.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder setPassword;
-        
-        /// <summary>
-        /// Control password.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
-        
-        /// <summary>
-        /// Control confirmPassword.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmPassword;
-        
-        /// <summary>
-        /// Control changePasswordHolder.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder changePasswordHolder;
-        
+
         /// <summary>
         /// Control CurrentPasswordLabel.
         /// </summary>
@@ -65,7 +31,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CurrentPasswordLabel;
-        
+
         /// <summary>
         /// Control CurrentPassword.
         /// </summary>
@@ -74,7 +40,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CurrentPassword;
-        
+
         /// <summary>
         /// Control NewPasswordLabel.
         /// </summary>
@@ -83,7 +49,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label NewPasswordLabel;
-        
+
         /// <summary>
         /// Control NewPassword.
         /// </summary>
@@ -92,7 +58,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewPassword;
-        
+
         /// <summary>
         /// Control ConfirmNewPasswordLabel.
         /// </summary>
@@ -101,7 +67,7 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ConfirmNewPasswordLabel;
-        
+
         /// <summary>
         /// Control ConfirmNewPassword.
         /// </summary>
@@ -110,5 +76,23 @@ namespace Facturador.GHO.Account {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmNewPassword;
+
+        /// <summary>
+        /// Control setPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder setPassword;
+
+        /// <summary>
+        /// Control changePasswordHolder.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder changePasswordHolder;
     }
 }
